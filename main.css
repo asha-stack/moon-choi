@@ -1,0 +1,259 @@
+@import url("footer.css");
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #292929;
+    font-family: Poppins;
+    font-family: 'Architype Renner', sans-serif;            
+}
+/* Add a black background color to the top navigation */
+.topnav {
+    position: relative;
+    background-color: #faf9f9;
+    overflow: hidden;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #464646;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 13px;
+  }
+ 
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    color: black;
+    
+  }
+  .left-nav :hover{
+      text-decoration: underline;
+  }
+
+
+  /* Centered section inside the top navigation */
+  .topnav-centered a {
+    font-weight: 800;
+    font-size: 17px;
+    float: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+  } 
+  .topnav-centered :hover{
+      text-decoration: none;
+  }
+
+  /* Right-aligned section inside the top navigation */
+  .topnav-right {
+    float: right;
+    
+  }
+  .topnav-right a:hover{
+    text-decoration: underline;
+  }
+  .gg-shopping-cart {
+    display: block;
+    box-sizing: border-box;
+    position: relative;
+    transform: scale(var(--ggs,1));
+    width: 20px;
+    height: 28px;
+    background:
+        linear-gradient(
+            to left,currentColor 12px,
+            transparent 0)
+            no-repeat -1px 6px/18px 2px,
+        linear-gradient(
+            to left,currentColor 12px,
+            transparent 0)
+            no-repeat 6px 14px/11px 2px,
+        linear-gradient(
+            to left,currentColor 12px,
+            transparent 0)
+            no-repeat 0 2px/4px 2px,
+        radial-gradient(
+            circle,currentColor 60%,
+            transparent 40%)
+            no-repeat 12px 17px/4px 4px,
+        radial-gradient(
+            circle,currentColor 60%,
+            transparent 40%)
+            no-repeat 6px 17px/4px 4px
+}
+.gg-shopping-cart::after,
+.gg-shopping-cart::before {
+    content: "";
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+    width: 2px;
+    height: 14px;
+    background: currentColor;
+    top: 2px;
+    left: 4px;
+    transform: skew(12deg)
+}
+.gg-shopping-cart::after {
+    height: 10px;
+    top: 6px;
+    left: 16px;
+    transform: skew(-12deg)
+}
+.cart{
+    margin: 10px;
+}
+
+
+
+img{
+  width:100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.grid-container{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4);
+  grid-gap: 0px;
+}
+.item1{
+  grid-column-start:1;
+  grid-column-end:3;
+  grid-row-start:1;
+  grid-row-end:3;
+}
+.item2{
+  grid-column-start:3;
+  grid-column-end:5;
+}
+
+
+.projects{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 40px;
+  padding: 32px 64px;
+}
+
+.projects img{
+  padding: 0 8px;
+  width: 100%;
+  height: 100%;
+}
+.projects a h5{
+  padding: 0 8px;
+  width: 100%;
+  height: 100%;
+ 
+}
+.projects a{
+   text-decoration: none;
+}
+
+.row-content{
+  margin-top: 40px;
+  margin-bottom: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 18px;
+  
+}
+.row-content a{
+  text-decoration: none;
+  font-weight: 900;
+  font-size: 16px;
+}
+.r-link{
+	display: var(--rLinkDisplay, inline-flex) !important;
+}
+.r-link[href]{
+	color: var(--rLinkColor) !important;
+	text-decoration: var(--rLinkTextDecoration, none) !important;
+}
+.text-underlined{
+  --uiTextUnderlinedLineHeight: var(--textUnderlinedLineHeight, 2px); /* 1 */
+  --uiTextUnderlinedLineGap: var(--textUnderlinedLineGap, .5rem);
+  --uiTextUnderlinedPaddingBottom: calc(var(--uiTextUnderlinedLineHeight) + var(--uiTextUnderlinedLineGap));
+
+  padding-bottom: var(--uiTextUnderlinedPaddingBottom) !important;
+  position: var(--textUnderlinedPosition, relative) !important;
+  z-index: var(--textUnderlinedZindex, 1) !important;
+}
+.text-underlined::after{
+  content: "";
+  width: var(--textUnderlinedLineWidht, 100%) !important;
+  height: var(--uiTextUnderlinedLineHeight) !important;
+  background-image: var(--textUnderlinedBackgroundImage, linear-gradient(to top, var(--textUnderlinedLineColor, currentColor) 30%, rgba(0, 0, 0, 0) 45%)) !important;
+
+  position: absolute;
+  left: var(--textUnderlinedLineLeft, 0) !important;
+  bottom: var(--textUnderlinedLineBottom, 0) !important;
+  z-index: var(--textUnderlinedLineZindex, -1) !important;
+}
+
+.link{
+	--textUnderlinedLineHeight: 100%;
+	--textUnderlinedLineGap: 0;
+	--textUnderlinedLineColor:#fdde8ee7;
+	padding-left: .75rem;
+	padding-right: .75rem;
+}
+.link::after{
+	will-change: width;
+	transition: width .1s ease-out;
+	transform: rotate(-2deg);
+	transform-origin: left bottom;
+}
+
+.link:hover{
+	--textUnderlinedLineWidht: 0;
+}
+
+.link:hover::after{
+	transition-duration: .15s;
+}
+
+.link:focus{
+	outline: 2px solid #e9c46a;
+	outline-offset: .5rem;
+}
+
+  /* Responsive navigation menu - display links on top of each other instead of next to each other (for mobile devices) */
+  @media screen and (max-width: 600px) {
+    .topnav a, .topnav-right {
+      float: none;
+      display: block;
+    }
+  
+    .topnav-centered a {
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: none;
+    }
+  }
+
+.menu-toggle .bar{
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color:#292929;
+}
+
+
+
+
+
